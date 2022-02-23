@@ -5,7 +5,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 
-mongoose.connect('mongodb+srv://ocproject6:pr6oc@project6.lvb15.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+mongoose.connect(process.env.key)
   .then(() => {
     console.log('Successfully connected to MongoDB Atlas!');
   })
