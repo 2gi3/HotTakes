@@ -5,7 +5,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 
-mongoose.connect(process.env.key)
+// mongoose.connect(process.env.KEY)   Why is this not working?
+mongoose.connect('mongodb+srv://ocproject6:pr6oc@project6.lvb15.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
   .then(() => {
     console.log('Successfully connected to MongoDB Atlas!');
   })
