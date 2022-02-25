@@ -1,2 +1,2 @@
--create controllers and test endpoints from browser.
+-sauce model needs to be changed!!!
 -continue course 

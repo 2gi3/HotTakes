@@ -5,6 +5,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const sauceRoutes = require('./routes/sauces');
+const userRoutes = require('./routes/user');
 // mongoose.connect(process.env.KEY)   Why is this not working?
 mongoose.connect('mongodb+srv://ocproject6:pr6oc@project6.lvb15.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
   .then(() => {
@@ -25,5 +26,6 @@ app.use((req, res, next) => {
   });
 
 app.use('/api/sauces', sauceRoutes) 
+app.use('/api/auth', userRoutes);
 
 module.exports = app;

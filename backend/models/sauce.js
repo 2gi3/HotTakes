@@ -8,4 +8,4 @@ const sauceSchema = mongoose.Schema({
   price: { type: Number, required: true },
 });
 
-module.exports = mongoose.model('sauce', sauceSchema);
+module.exports = mongoose.model('Sauce', sauceSchema);
