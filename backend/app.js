@@ -6,6 +6,7 @@ const mongoose = require('mongoose');
 const app = express();
 const sauceRoutes = require('./routes/sauces');
 const userRoutes = require('./routes/user');
+const path = require('path');
 // mongoose.connect(process.env.KEY)   Why is this not working?
 mongoose.connect('mongodb+srv://ocproject6:pr6oc@project6.lvb15.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
   .then(() => {
@@ -17,6 +18,7 @@ mongoose.connect('mongodb+srv://ocproject6:pr6oc@project6.lvb15.mongodb.net/myFi
   });
 
   app.use(express.json());
+  app.use('/images', express.static(path.join(__dirname, 'images')));
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
