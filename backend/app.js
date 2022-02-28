@@ -1,13 +1,13 @@
 // mongoDB connection link: mongodb+srv://ocproject6:<password>@project6.lvb15.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 // mongoDB project6 password: pr6oc
-
+// require("dotenv").config();
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const sauceRoutes = require('./routes/sauces');
 const userRoutes = require('./routes/user');
 const path = require('path');
-// mongoose.connect(process.env.KEY)   Why is this not working?
+// mongoose.connect(process.env.KEY);
 mongoose.connect('mongodb+srv://ocproject6:pr6oc@project6.lvb15.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
   .then(() => {
     console.log('Successfully connected to MongoDB Atlas!');
