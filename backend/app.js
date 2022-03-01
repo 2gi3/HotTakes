@@ -12,7 +12,7 @@ mongoose.connect('mongodb+srv://ocproject6:pr6oc@project6.lvb15.mongodb.net/myFi
   .then(() => {
     console.log('Successfully connected to MongoDB Atlas!');
   })
-  .catch((error) => {
+  .catch((error) => { 
     console.log('Unable to connect to MongoDB Atlas!');
     console.error(error);
   });
