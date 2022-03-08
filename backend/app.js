@@ -1,15 +1,15 @@
 // mongoDB connection link: mongodb+srv://ocproject6:<password>@project6.lvb15.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 // mongoDB project6 password: pr6oc
-// require("dotenv").config();
+require("dotenv").config({path: __dirname + '/.env'});
+// import * as ENV from '.env'
 const express = require('express');
 const mongoose = require('mongoose');
 const app = express();
 const sauceRoutes = require('./routes/sauces');
 const userRoutes = require('./routes/user');
 const path = require('path');
-// mongoose.connect(process.env.KEY);
-mongoose.connect('mongodb+srv://ocproject6:pr6oc@project6.lvb15.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
-  .then(() => {
+// mongoose.connect('mongodb+srv://ocproject6:pr6oc@project6.lvb15.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+mongoose.connect(process.env['KEY']) .then(() => {
     console.log('Successfully connected to MongoDB Atlas!');
   })
   .catch((error) => { 
