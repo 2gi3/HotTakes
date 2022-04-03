@@ -15,7 +15,9 @@
     "concurrently": "^7.0.0",
     "http-server": "^14.1.0",
     "live-server": "^1.1.0",
-    "mongoose-unique-validator": "^3.0.0",
-    "run-script-os": "^1.0.7"
+    "mongoose-unique-validator": "^3.0.0"
+  },
+  "devDependencies": {
+    "run-script-os": "^1.1.6"
   }
 }

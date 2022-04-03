@@ -28,7 +28,7 @@ exports.createSauce= (req, res, next) => {
         res.status(400).json({
           error: error
         });
-      }
+      } 
     );
   };
 
@@ -110,6 +110,8 @@ exports.createSauce= (req, res, next) => {
               res.status(200).json({
                 message: 'Deleted!'
               });
+              
+              
             }
           ).catch(
             (error) => {

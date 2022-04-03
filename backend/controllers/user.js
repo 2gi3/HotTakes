@@ -56,7 +56,7 @@ exports.signup = (req, res, next) => {
               error: error
             });
           }
-        );
+        ); 
       }
     ).catch(
       (error) => {
